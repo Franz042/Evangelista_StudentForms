@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form id="registrationForm" novalidate>
+        <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" placeholder="Enter first name" required>
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="middleName">Middle Name</label>
+            <input type="text" id="middleName" placeholder="Optional">
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" placeholder="Enter last name" required>
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course *</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option>BS Computer Science</option>
+                <option>BS Information Technology</option>
+                <option>BS Information Systems</option>
+            </select>
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" placeholder="Min 8 chars, 1 Up, 1 Num, 1 Spec" required>
+            <div id="strengthMeter"></div>
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group-row">
+            <label>Gender *</label>
+            <div class="input-row">
+                <label class="option"><input type="radio" name="gender" value="Male" required> Male</label>
+                <label class="option"><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group-row">
+            <label>Terms *</label>
+            <div class="input-row">
+                <label class="option"><input type="checkbox" id="terms" required> I agree to the Terms and Conditions</label>
+            </div>
+            <small class="error"></small>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
